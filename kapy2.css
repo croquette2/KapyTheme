@@ -5610,32 +5610,35 @@ body {
 /* 1. HORIZONTAL SERVER LIST (Top of screen) */
 #app-mount ._5e434347c823b592-guilds {
   width: 100vw !important;
-  height: 72px !important;
-  /* Increased height */
+  height: 85px !important;
+  /* More space for icons */
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   display: flex !important;
   flex-direction: row !important;
-  background-color: var(--background-secondary-alt) !important;
+  background-color: var(--background-tertiary) !important;
+  /* Darker distinct background */
   z-index: 1001 !important;
-  border-bottom: 1px solid var(--background-modifier-accent) !important;
+  border-bottom: 3px solid var(--text-link) !important;
+  /* Stylish accent border */
   margin: 0 !important;
   padding: 0 !important;
-  padding-top: 22px !important;
-  /* Push down content */
+  padding-top: 25px !important;
+  /* Clear window drag area */
+  padding-left: 10px !important;
   box-sizing: border-box !important;
 }
 
 /* Base adjustment to push content down */
 #app-mount ._5e434347c823b592-base {
   position: fixed !important;
-  top: 72px !important;
-  /* Match guilds height */
+  top: 85px !important;
+  /* Match new guilds height */
   left: 0 !important;
   width: 100vw !important;
-  height: calc(100vh - 72px) !important;
+  height: calc(100vh - 85px) !important;
 }
 
 /* Make server list scroll horizontal */
@@ -5644,8 +5647,8 @@ body {
   flex-direction: row !important;
   overflow-y: hidden !important;
   overflow-x: auto !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
+  padding: 0 !important;
+  padding-right: 10px !important;
   align-items: center !important;
   width: 100% !important;
   height: 100% !important;
@@ -5656,7 +5659,8 @@ body {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 12px !important;
+  gap: 15px !important;
+  /* More space between servers */
 }
 
 /* 2. PROFILE POSITION FIX (Bottom Left) */
