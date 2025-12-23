@@ -5610,35 +5610,32 @@ body {
 /* 1. HORIZONTAL SERVER LIST (Top of screen) */
 #app-mount ._5e434347c823b592-guilds {
   width: 100vw !important;
-  height: 85px !important;
-  /* More space for icons */
+  height: 60px !important;
   position: fixed !important;
-  top: 0 !important;
+  top: 30px !important;
+  /* VISIBLY BELOW TITLE BAR */
   left: 0 !important;
   right: 0 !important;
   display: flex !important;
   flex-direction: row !important;
   background-color: var(--background-tertiary) !important;
-  /* Darker distinct background */
-  z-index: 1001 !important;
-  border-bottom: 3px solid var(--text-link) !important;
-  /* Stylish accent border */
+  z-index: 9999 !important;
+  /* Max Z-Index */
+  border-bottom: 2px solid var(--text-link) !important;
   margin: 0 !important;
-  padding: 0 !important;
-  padding-top: 25px !important;
-  /* Clear window drag area */
-  padding-left: 10px !important;
+  padding: 0 10px !important;
   box-sizing: border-box !important;
+  align-items: center !important;
 }
 
 /* Base adjustment to push content down */
 #app-mount ._5e434347c823b592-base {
   position: fixed !important;
-  top: 85px !important;
-  /* Match new guilds height */
+  top: 90px !important;
+  /* 30px (Title) + 60px (Guilds) */
   left: 0 !important;
   width: 100vw !important;
-  height: calc(100vh - 85px) !important;
+  height: calc(100vh - 90px) !important;
 }
 
 /* Make server list scroll horizontal */
