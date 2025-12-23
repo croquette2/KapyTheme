@@ -581,11 +581,12 @@ body ._5e434347c823b592-guilds::before {
 }
 
 #app-mount ._5e434347c823b592-panels {
-  display: contents
+  display: flex;
+  flex-direction: column;
 }
 
 #app-mount ._5e434347c823b592-panels ._37e49614b9f110a9-container {
-  order: -1;
+  order: 0;
   height: 48px;
   container-type: inline-size;
   gap: 0
