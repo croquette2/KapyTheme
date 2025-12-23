@@ -24,8 +24,8 @@
   --serverBar-FolderStyle: 1;
   --serverBar-Spacing: 17px;
   --serverBar-IconSize: 100;
-  --background-app: url(https://eight-p.github.io/BD.8P/Themes/T1/assets/Main-bg.jpg);
-  --background-server: url(https://eight-p.github.io/BD.8P/Themes/T1/assets/Server-bg.jpg);
+  --background-app: var(--background-tertiary);
+  --background-server: var(--background-secondary);
   --backgroundBrightness-app: 80;
   --backgroundBrightness-server: 100;
   --backgroundBlur-app: 0;
