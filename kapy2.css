@@ -5602,3 +5602,91 @@ body {
     display: none
   }
 }
+
+/* ========================================================================
+   CUSTOM OVERRIDES: HORIZONTAL SERVER LIST (TOP)
+   ======================================================================== */
+
+/* 1. SERVER LIST CONTAINER (TOP) */
+#app-mount ._5e434347c823b592-guilds {
+  width: 100vw !important;
+  height: 75px !important;
+  /* Fixed height for the bar */
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  background-color: var(--background-secondary-alt) !important;
+  z-index: 9999 !important;
+  /* Above everything */
+  border-bottom: 2px solid var(--background-modifier-accent) !important;
+  margin: 0 !important;
+  /* SAFE AREA FOR WINDOW CONTROLS (Top right buttons) */
+  padding-top: 22px !important;
+  padding-left: 10px !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. PUSH MAIN CONTENT DOWN */
+#app-mount ._5e434347c823b592-base {
+  position: absolute !important;
+  top: 75px !important;
+  /* Start AFTER the server bar */
+  left: 0 !important;
+  width: 100vw !important;
+  height: calc(100vh - 75px) !important;
+}
+
+/* 3. HORIZONTAL SCROLLING FOR SERVERS */
+#app-mount ._5e434347c823b592-guilds .d125d22cdfd32cfe-scrollerBase {
+  display: flex !important;
+  flex-direction: row !important;
+  overflow-y: hidden !important;
+  overflow-x: auto !important;
+  padding: 0 !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 4. SERVER ICONS ALIGNMENT */
+#app-mount ._5e434347c823b592-guilds [class*="listItem"] {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  height: 100% !important;
+  margin: 0 5px !important;
+}
+
+#app-mount ._5e434347c823b592-guilds [class*="blobContainer"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Rotate selection pill */
+#app-mount ._5e434347c823b592-guilds [class*="pill"] {
+  transform: rotate(90deg) !important;
+  top: auto !important;
+  bottom: 0 !important;
+  height: 8px !important;
+  width: 8px !important;
+}
+
+/* 5. USER PROFILE POSITION (Reset to Standard Bottom Left) */
+/* This ensures the profile is NOT moved to the top */
+#app-mount ._5e434347c823b592-panels ._37e49614b9f110a9-container {
+  order: 0 !important;
+}
+
+#app-mount ._5e434347c823b592-panels {
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  bottom: 0 !important;
+}
