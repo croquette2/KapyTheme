@@ -5642,4 +5642,61 @@ body {
 /* Adjust main content to not be hidden by bottom bar */
 [class*="base_"] {
   height: calc(100% - 52px) !important;
+  margin-top: 52px !important;
+  /* Also add space for top bar */
+}
+
+/* ========================================================================
+   KAPY CUSTOM: HORIZONTAL FRIENDS BAR (TOP)
+   ======================================================================== */
+
+/* Move DM/Friends list to top */
+[class*="privateChannels_"] {
+  position: fixed !important;
+  top: 22px !important;
+  /* Below window controls */
+  bottom: auto !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 52px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  z-index: 100 !important;
+  background: var(--background-secondary) !important;
+  border-bottom: 1px solid var(--background-modifier-accent) !important;
+  padding: 0 10px !important;
+  align-items: center !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
+/* Hide the header text in DM list */
+[class*="privateChannels_"] [class*="header_"],
+[class*="privateChannels_"] [class*="searchBar_"],
+[class*="privateChannels_"] [class*="privateChannelsHeaderContainer_"] {
+  display: none !important;
+}
+
+/* Style each DM item as just an avatar */
+[class*="privateChannels_"] [class*="channel_"] {
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  margin: 0 4px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+/* Hide the name text, show only avatar */
+[class*="privateChannels_"] [class*="channel_"] [class*="name_"],
+[class*="privateChannels_"] [class*="channel_"] [class*="activityText_"],
+[class*="privateChannels_"] [class*="channel_"] [class*="subtext_"] {
+  display: none !important;
+}
+
+/* Make avatar fill the circle */
+[class*="privateChannels_"] [class*="channel_"] [class*="avatar_"] {
+  width: 40px !important;
+  height: 40px !important;
 }
